@@ -1,0 +1,120 @@
+import { createGlobalStyle } from "styled-components";
+export const GlobalStyle = createGlobalStyle`
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Quicksand";
+    
+
+}
+ p{
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+ }
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0 50px;
+  width: 70%;  
+  overflow-x: hidden; 
+}
+.navbar {
+  width: 30%; 
+}
+
+ 
+h1{
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+ }
+   
+ h2{
+  font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.headingColor};
+   
+}
+h3{
+  font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.headingColor};
+   
+}
+
+h4{
+  font-weight: 600;
+      margin-bottom: 10px;
+       font-size: 30px;
+      color: ${({ theme }) => theme.colors.headingColor};
+      cursor: pointer;
+      font-family: "Poppins";
+
+}
+.slick-prev,
+  .slick-next {
+     border-radius: 50%;
+      height: 30px;
+ width: 30px;
+    z-index: 1;
+    top: 25%; // Adjust vertical alignment
+    margin: 0 20px;
+    opacity: 1;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 22px;  
+    color: black; 
+    opacity:1 ;
+   }
+  .slick-dots {
+    bottom: 150px;  
+  }
+
+  .slick-dots li button:before {
+    font-size: 12px;  
+    color: silver; 
+    opacity:1 ;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color:  ${({ theme }) => theme.colors.headingColor}; 
+    opacity:1 ; 
+  }
+
+
+  @media only screen and (max-width: 600px) {
+ h4{
+  margin-top: 15px;
+  font-size:20px;
+ }
+ p {
+        font-weight: 500;
+         margin-left: 5px;
+         font-size: 12px;
+      }
+      }
+      @media only screen and (max-width: 900px) {
+        .main-content {
+   padding: 0 30px;
+ }
+      }
+    
+
+
+  `;
