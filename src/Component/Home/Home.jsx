@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "../NavBar/Navbar";
-import Hero from "./Hero";
-import About from "../About";
-
+ import Hero from "./Hero";
+ 
 const Home = () => {
   return (
     <Wrapper>

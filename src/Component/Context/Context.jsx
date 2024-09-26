@@ -1,6 +1,5 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
-import axios from "axios";
-import reducer from "./ContextReducer";
+import { createContext, useContext,  useReducer } from "react";
+ import reducer from "./ContextReducer";
 
 export const UserContext = createContext();
 

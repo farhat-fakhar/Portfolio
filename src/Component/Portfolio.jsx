@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Title from "./Home/Title";
-import { Col, Image, Row } from "react-bootstrap";
+import {  Image } from "react-bootstrap";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
 
