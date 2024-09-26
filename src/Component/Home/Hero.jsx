@@ -3,7 +3,7 @@ import { Col, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
-const Hero = () => {
+ const Hero = () => {
   const handleDownload = () => {
     const resumeUrl = "/images/Farhat-resume.pdf";
     const link = document.createElement("a");
@@ -41,8 +41,8 @@ const Hero = () => {
           </div>
         </Col>
         <Col lg={8} md={12} className="title ">
-          <Image className="img" src="/images/pngwing.com (3).png" fluid />
-        </Col>
+          <Image className="img" src="" fluid />
+         </Col>
       </Row>
     </Wrapper>
   );

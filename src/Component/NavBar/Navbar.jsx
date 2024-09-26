@@ -26,7 +26,7 @@ const Navbar = () => {
     <Wrapper>
       <div className="main ">
         <div className="img ">
-          <Image src="/images/logo.jpg" fluid className="logo" />
+          <Image src="public/images/logo.jpg" fluid className="logo" />
         </div>
         <div className="name">
           <h1>Farhat Bibi</h1>
