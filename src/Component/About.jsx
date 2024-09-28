@@ -42,7 +42,7 @@ const About = () => {
                 <strong>
                   <b>Name: </b>
                 </strong>
-                <p>Farhat Bibi</p>
+                <p>Farhat Fakhar</p>
               </li>
               <li>
                 <span className="dot">
