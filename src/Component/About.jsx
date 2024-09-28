@@ -24,15 +24,19 @@ const About = () => {
         </Col>
       </Row>
       <Row className="mt-4">
-        <Col lg={5} md={12} className="d-flex justify-content-center align-items-center">
-          <Image src={logo} fluid className="img"/>
+        <Col
+          lg={5}
+          md={12}
+          className="d-flex justify-content-center align-items-center"
+        >
+          <Image src={logo} fluid className="img" />
         </Col>
         <Col lg={7} md={12} className=" ">
           <h4 className="mt-2">Front-end Web Developer</h4>
           <div className="menu">
             <ul className="m-0 p-0">
               <li>
-                <span className="me-3">
+                <span className="dot">
                   <LiaDotCircleSolid />
                 </span>
                 <strong>
@@ -41,7 +45,7 @@ const About = () => {
                 <p>Farhat Bibi</p>
               </li>
               <li>
-                <span className="me-3">
+                <span className="dot">
                   <LiaDotCircleSolid />
                 </span>
                 <strong>
@@ -50,7 +54,7 @@ const About = () => {
                 <p>Pakistani</p>
               </li>
               <li>
-                <span className="me-3">
+                <span className="dot">
                   <LiaDotCircleSolid />
                 </span>
                 <strong>
@@ -59,7 +63,7 @@ const About = () => {
                 <p>+92 345 7746737</p>
               </li>
               <li>
-                <span className="me-3">
+                <span className="dot">
                   <LiaDotCircleSolid />
                 </span>
                 <strong>
@@ -68,7 +72,7 @@ const About = () => {
                 <p>Kallur Kot, Bhakkar, Punjab, Pakistan</p>
               </li>
               <li>
-                <span className="me-3">
+                <span className="dot">
                   <LiaDotCircleSolid />
                 </span>
                 <strong>
@@ -77,13 +81,13 @@ const About = () => {
                 <p>Master of Science in Information Technology</p>
               </li>
               <li>
-                <span className="me-3">
+                <span className="dot">
                   <LiaDotCircleSolid />
                 </span>
                 <strong>
                   <b>Email: </b>
                 </strong>
-                <p>farhatfakhar819@gmail.com</p>
+                <p  >farhatfakhar819@gmail.com</p>
               </li>
             </ul>
           </div>
@@ -112,6 +116,9 @@ const Wrapper = styled.div`
         padding: 0;
         margin-left: 15px;
       }
+      .dot {
+        margin-right: 10px;
+      }
     }
   }
   @media only screen and (max-width: 700px) {
@@ -119,13 +126,37 @@ const Wrapper = styled.div`
       font-size: 20px;
       margin: 0;
     }
-    ul{
-      li{
+    ul {
+      li {
         padding-top: 5px;
       }
     }
-    .img{
+    .img {
       height: 300px;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+   padding: 100px 0;
+    .details {
+      p {
+        font-size: 14px;
+      }
+    }
+    .img {
+      display: none;
+    }
+  }
+  .menu {
+    ul {
+      li {
+        .dot {
+          margin-right: 5px;
+        }
+        p {
+          margin-left: 5px;
+
+        }
+      }
     }
   }
 `;

@@ -30,7 +30,7 @@ const Navbar = () => {
           <Image src={logo} fluid className="logo" />
         </div>
         <div className="name">
-          <h1>Farhat Bibi</h1>
+          <h1>Farhat Fakhar</h1>
         </div>
         <div className="social_icons d-flex justify-content-center align-items-center">
           <ul className="m-0 p-0 d-flex mt-3">
@@ -240,6 +240,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    h1{
+      font-size: 18px;
+    }
     .img {
       margin: 50px auto;
       display: block;
@@ -255,19 +258,61 @@ const Wrapper = styled.div`
         }
       }
     }
-  
-  .social_icons {
-    ul {
-      li {
-        margin-top: 20px;
-        margin-right: 10px;
-        font-weight: 500;
-        font-size: 13px;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
+
+    .social_icons {
+      ul {
+        li {
+          margin-top: 20px;
+          margin-right: 10px;
+          font-weight: 500;
+          font-size: 13px;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+        }
       }
     }
-  }}
+  }
+  @media only screen and (max-width: 450px) {
+    width: 130px;
+    h1{
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+    .img {
+      margin: 30px auto;
+      display: block;
+      width: 80px;
+    }
+    .social_icons {
+      visibility: hidden;
+      margin: 0;
+      padding: 0;
+      ul{
+        padding: 0;
+        margin: 0;
+        li{
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .menu {
+      margin-left:0;
+
+      ul {
+   
+        li {
+          font-weight: 500;
+          margin-top: 10px;
+          span {
+          font-size: 20px;
+        }
+        }
+      }
+    }
+   
 `;
 export default Navbar;

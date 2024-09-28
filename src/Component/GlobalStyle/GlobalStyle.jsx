@@ -94,6 +94,9 @@ h4{
     color:  ${({ theme }) => theme.colors.headingColor}; 
     opacity:1 ; 
   }
+  @media only screen and (max-width: 500px) {
+
+  }
   @media only screen and (max-width: 700px) {
 
 .main-content {

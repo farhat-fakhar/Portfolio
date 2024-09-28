@@ -2,31 +2,36 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import Title from "./Home/Title";
- 
+
 import { FaRegDotCircle } from "react-icons/fa";
 
 const Skills = () => {
   const settings = {
     dots: true,
     infinite: true,
-    
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024, // Below this width, apply settings
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2, // Show 2 slides at a time
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 768, // Below this width, apply settings
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1, // Show 1 slide at a time
+          slidesToScroll: 1,
         },
-      },
+      }
+    
+         
     ],
   };
 
@@ -45,54 +50,129 @@ const Skills = () => {
           <div className="item d-flex flex-column ">
             <h5> Frontend Development</h5>
             <ul className="m-0 p-0">
-              <li><span className="me-3"><FaRegDotCircle/></span>HTML5</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>CSS3</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>JavaScript (ES6+)</li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                HTML5
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                CSS3
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                JavaScript (ES6+)
+              </li>
             </ul>
           </div>
 
           <div className="item d-flex flex-column  ">
             <h5>Component Libraries & UI/UX Design</h5>
             <ul className="m-0 p-0">
-              <li><span className="me-3"><FaRegDotCircle/></span>MUI (Material Design)</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>Styled-components</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>React Bootstrap</li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                MUI (Material Design)
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Styled-components
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                React Bootstrap
+              </li>
             </ul>
           </div>
 
           <div className="item d-flex flex-column  ">
             <h5>Version Control & Collaboration</h5>
             <ul className="m-0 p-0">
-              <li><span className="me-3"><FaRegDotCircle/></span>Git & GitHub</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>Collaboration Tools</li>
-              
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Git & GitHub
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Collaboration Tools
+              </li>
             </ul>
           </div>
           <div className="item d-flex flex-column  ">
             <h5>JavaScript Ecosystem</h5>
             <ul className="m-0 p-0">
-              <li><span className="me-3"><FaRegDotCircle/></span>ES6+ Features</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>JavaScript Libraries</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>API Integration</li>
-              
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                ES6+ Features
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                JavaScript Libraries
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                API Integration
+              </li>
             </ul>
           </div>
           <div className="item d-flex flex-column  ">
             <h5>Tooling & Build Process</h5>
             <ul className="m-0 p-0">
-              <li><span className="me-3"><FaRegDotCircle/></span>NPM & Yarn</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>Webpack</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>Babel</li>
-              
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                NPM & Yarn
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Webpack
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Babel
+              </li>
             </ul>
           </div>
           <div className="item d-flex flex-column  ">
             <h5>Testing & Debugging</h5>
             <ul className="m-0 p-0">
-              <li><span className="me-3"><FaRegDotCircle/></span>React Component Testing</li>
-              <li><span className="me-3"><FaRegDotCircle/></span>Browser Developer Tools</li>
-             
-              
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                React Component Testing
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Browser Developer Tools
+              </li>
             </ul>
           </div>
         </Slider>
@@ -102,9 +182,9 @@ const Skills = () => {
 };
 
 const Wrapper = styled.div`
-  max-width: 100%;
-  overflow: hidden;
- 
+  /* max-width: 100%;
+  overflow: hidden; */
+
   p {
     text-align: justify;
     color: ${({ theme }) => theme.colors.headingColor};
@@ -123,20 +203,40 @@ const Wrapper = styled.div`
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 15px 25px;
     height: 200px;
-   }
-   .slider-container{
+  }
+  .slider-container {
     padding: 60px 0;
-   }
+  }
   ul {
     list-style: none;
     li {
-      padding-top: 7px ;
+      padding-top: 7px;
     }
   }
   .slick-slide {
-  margin: 10px; /* Adjust this value to increase or decrease spacing */
-}
+    margin: 10px; /* Adjust this value to increase or decrease spacing */
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 50px 0;
+    p{
+      font-size: 14px;
+    }
+    .item {
+      height: 300px;
+    }
+  }
+  .slick-slide {
+    margin: 0; /* Adjust this value to increase or decrease spacing */
+  }
+  .slick-dots {
+    bottom: 50px;  
+  }
+  .slick-prev,
+  .slick-next {
  
+    top: 45%; // Adjust vertical alignment
+ 
+  }
 `;
 
 export default Skills;

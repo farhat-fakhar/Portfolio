@@ -3,7 +3,7 @@ import { Col, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
-import hero from "../assets/hero.png";
+import hero from "../assets/logo.jpg";
 const Hero = () => {
   const handleDownload = () => {
     const resumeUrl = "/images/Farhat-resume.pdf";
@@ -23,7 +23,7 @@ const Hero = () => {
           className="content d-flex justify-content-center align-items-start flex-column"
         >
           <h2>Hello! I'm</h2>
-          <h1>Farhat Bibi</h1>
+          <h1>Farhat Fakhar</h1>
 
           <p>
             "I’m a passionate Front-End Developer with a focus on building
@@ -41,8 +41,8 @@ const Hero = () => {
             </Button>
           </div>
         </Col>
-        <Col lg={6} md={12} className="title border">
-          {/* <Image className="img" src={hero} fluid /> */}
+        <Col lg={6} md={12} className="title">
+          <Image className="img" src={hero} fluid />  
         </Col>
       </Row>
     </Wrapper>
@@ -50,7 +50,11 @@ const Hero = () => {
 };
 const Wrapper = styled.div`
   padding: 70px 0;
-
+.title{
+.img{
+  border-radius: 10%;
+}
+}
   h1 {
     margin: 0 0 10px 0;
     font-size: 50px;
@@ -88,6 +92,27 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    h1 {
+  
+    font-size: 40px;
+     
   }
+  }
+  @media only screen and (max-width: 450px) {
+    h1 {
+    margin: 0 0 10px 0;
+    font-size: 25px;
+     line-height: 20px;
+ 
+  }
+  p{
+    margin-bottom: 10px;
+  }
+  .content {
+    p {
+       font-size: 16px;  
+    }
+  }
+}
 `;
 export default Hero;

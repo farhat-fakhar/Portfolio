@@ -10,7 +10,7 @@ const Contact = () => {
     <Wrapper>
       <Title title="Contact" />
       <Row className="d-flex justify-content-around ">
-        <Col lg={5} md={12}  >
+        <Col lg={5} md={12} className="p-0" >
           <div className="info ">
             <div className="address d-flex">
               <div className="icon  d-flex justify-content-center align-items-center">
@@ -54,7 +54,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="img d-flex justify-content-center align-items-center pt-1">
-              <Image src={contacting} fluid style={{ height: "300px" }} />
+              <Image className="image" src={contacting} fluid style={{ height: "300px" }} />
             </div>
           </div>
         </Col>
@@ -188,6 +188,16 @@ const Wrapper = styled.div`
       font-weight: 500;
     }
   }
+  }
+  @media only screen and (max-width: 450px) {
+    .info{
+      padding: 15px ;
+    }
+.img{
+  .image{
+    display: none;
+  }
+}
   }
 `;
 export default Contact;

@@ -132,9 +132,51 @@ const Wrapper = styled.div`
   }
  
   @media only screen and (max-width: 700px) {
+    .MuiTimelineItem-positionAlternate {
+      justify-content: flex-start; /* Ensure alignment remains proper */
+    }
+    .MuiTimelineItem-missingOppositeContent:before {
+      content: none; /* Remove the opposite content space */
+    }
     h3 {
      font-size: 16px;
   }
+  }
+   /* Adjust layout and typography for mobile screens */
+   @media only screen and (max-width: 450px) {
+    padding: 0;
+    .MuiTimelineItem-positionAlternate {
+      justify-content: flex-start; /* Ensure alignment remains proper */
+    }
+    .MuiTimelineItem-missingOppositeContent:before {
+      content: none; /* Remove the opposite content space */
+    }
+ ul{
+  margin: 0;
+  padding: 0;
+ }
+    h3 {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .item {
+      padding: 5px 8px;
+
+      .detail p {
+        font-size: 12px;
+        margin-right: 5px;
+      }
+
+      .detail {
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 `;
 export default Education;
