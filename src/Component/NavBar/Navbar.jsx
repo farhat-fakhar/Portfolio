@@ -1,7 +1,8 @@
-import React  from "react";
+import React from "react";
 import { Image } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import logo from "../assets/logo.jpg";
 import {
   FaWhatsapp,
   FaLinkedinIn,
@@ -26,7 +27,7 @@ const Navbar = () => {
     <Wrapper>
       <div className="main ">
         <div className="img ">
-          <Image src="public/images/logo.jpg" fluid className="logo" />
+          <Image src={logo} fluid className="logo" />
         </div>
         <div className="name">
           <h1>Farhat Bibi</h1>
@@ -52,8 +53,10 @@ const Navbar = () => {
               </a>
             </li>
             <NavLink
+              target="_blank"
+              rel="noopener noreferrer"
               to="https://www.linkedin.com/in/farhatbibiofficial/"
-              style={{ textDecoration: "none"}}
+              style={{ textDecoration: "none" }}
             >
               <li>
                 <FaLinkedinIn />
@@ -68,6 +71,8 @@ const Navbar = () => {
               </li>
             </NavLink>
             <NavLink
+              target="_blank"
+              rel="noopener noreferrer"
               to="https://web.facebook.com/profile.php?id=100024326713598"
               style={{ textDecoration: "none" }}
             >
@@ -230,11 +235,39 @@ const Wrapper = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 600px) {
-    width: 200px;
-    .menu{
-      margin-left: 0;
+  @media only screen and (max-width: 700px) {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img {
+      margin: 50px auto;
+      display: block;
+      width: 120px;
     }
-}
+    .menu {
+      margin-left: 15px;
+
+      ul {
+        padding-left: 0;
+        li {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .social_icons {
+    ul {
+      li {
+        margin-top: 20px;
+        margin-right: 10px;
+        font-weight: 500;
+        font-size: 13px;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 `;
 export default Navbar;

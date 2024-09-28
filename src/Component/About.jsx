@@ -3,13 +3,13 @@ import { Col, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 import Title from "./Home/Title";
 import { LiaDotCircleSolid } from "react-icons/lia";
-
+import logo from "../Component/assets/logo.jpg";
 const About = () => {
   return (
     <Wrapper>
       <Title title="Introduction" />
       <Row>
-        <Col>
+        <Col lg={12} md={12}>
           <div className="details">
             <p>
               "Hello, I'm Farhat, a front-end web developer with a Master's in
@@ -24,10 +24,10 @@ const About = () => {
         </Col>
       </Row>
       <Row className="mt-4">
-        <Col lg={5} className="">
-          <Image src="/images/logo.jpg" fluid />
+        <Col lg={5} md={12} className="d-flex justify-content-center align-items-center">
+          <Image src={logo} fluid className="img"/>
         </Col>
-        <Col lg={7} className=" ">
+        <Col lg={7} md={12} className=" ">
           <h4 className="mt-2">Front-end Web Developer</h4>
           <div className="menu">
             <ul className="m-0 p-0">
@@ -101,7 +101,7 @@ const Wrapper = styled.div`
       font-weight: 500;
     }
   }
-  
+
   ul {
     list-style: none;
     li {
@@ -114,23 +114,19 @@ const Wrapper = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 600px) {
-  
-
- ul {
-     li {
-       padding-top: 5px;
-       strong{
-        font-size: 12px;
-
-       }
-      p {
-        font-weight: 500;
-         margin-left: 5px;
-         font-size: 12px;
+  @media only screen and (max-width: 700px) {
+    h4 {
+      font-size: 20px;
+      margin: 0;
+    }
+    ul{
+      li{
+        padding-top: 5px;
       }
     }
-  }
+    .img{
+      height: 300px;
+    }
   }
 `;
 export default About;

@@ -136,11 +136,7 @@ const Wrapper = styled.div`
   .slick-slide {
   margin: 10px; /* Adjust this value to increase or decrease spacing */
 }
-@media only screen and (max-width: 1224px) {
-  .item {
-     height: 250px;
-   }
-}
+ 
 `;
 
 export default Skills;

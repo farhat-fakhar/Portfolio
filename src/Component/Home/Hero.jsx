@@ -3,7 +3,8 @@ import { Col, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
- const Hero = () => {
+import hero from "../assets/hero.png";
+const Hero = () => {
   const handleDownload = () => {
     const resumeUrl = "/images/Farhat-resume.pdf";
     const link = document.createElement("a");
@@ -17,7 +18,7 @@ import DownloadIcon from "@mui/icons-material/Download";
     <Wrapper>
       <Row>
         <Col
-          lg={4}
+          lg={6}
           md={12}
           className="content d-flex justify-content-center align-items-start flex-column"
         >
@@ -40,15 +41,15 @@ import DownloadIcon from "@mui/icons-material/Download";
             </Button>
           </div>
         </Col>
-        <Col lg={8} md={12} className="title ">
-          <Image className="img" src="" fluid />
-         </Col>
+        <Col lg={6} md={12} className="title border">
+          {/* <Image className="img" src={hero} fluid /> */}
+        </Col>
       </Row>
     </Wrapper>
   );
 };
 const Wrapper = styled.div`
-  margin: 70px 0;
+  padding: 70px 0;
 
   h1 {
     margin: 0 0 10px 0;
@@ -82,24 +83,11 @@ const Wrapper = styled.div`
       font-weight: 500;
     }
   }
-  @media only screen and (max-width: 1267px) {
-    h1 {
-      font-size: 30px;
-      margin: 0;
-    }
-    p {
-      margin-bottom: 10px;
-      font-size: 14px;
-      text-align: start;
-    }
-    h2 {
-      font-size: 20px;
-      margin-bottom: 0;
-    }
-  }
-  @media only screen and (max-width: 667px) {
-    margin: 20px 0;
- 
+  @media only screen and (max-width: 700px) {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 export default Hero;

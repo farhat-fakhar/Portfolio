@@ -131,16 +131,10 @@ const Wrapper = styled.div`
     }
   }
  
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 700px) {
     h3 {
-      font-size: 12px;
-      font-weight: 500;
-    }
-    .detail {
-      p {
-        font-size: 12px;
-      }
-    }
+     font-size: 16px;
+  }
   }
 `;
 export default Education;

@@ -24,12 +24,10 @@ export const GlobalStyle = createGlobalStyle`
   flex: 1;
   padding: 0 50px;
   width: 70%;  
+  height: 100vh;
   overflow-x: hidden; 
 }
-.navbar {
-  width: 30%; 
-}
-
+ 
  
 h1{
   font-size: 24px;
@@ -96,25 +94,13 @@ h4{
     color:  ${({ theme }) => theme.colors.headingColor}; 
     opacity:1 ; 
   }
+  @media only screen and (max-width: 700px) {
 
-
-  @media only screen and (max-width: 600px) {
- h4{
-  margin-top: 15px;
-  font-size:20px;
- }
- p {
-        font-weight: 500;
-         margin-left: 5px;
-         font-size: 12px;
-      }
-      }
-      @media only screen and (max-width: 900px) {
-        .main-content {
-   padding: 0 30px;
- }
-      }
-    
-
-
+.main-content {
+ 
+  padding: 0 20px;
+  
+}
+  }
+  
   `;

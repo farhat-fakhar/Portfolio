@@ -4,6 +4,9 @@ import Title from "./Home/Title";
 import {  Image } from "react-bootstrap";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
+import portfolio1 from "./assets/portfolio1.PNG"
+import portfolio2 from "./assets/portfolio2.PNG"
+import portfolio3 from "./assets/project3.PNG"
 
 const Portfolio = () => {
   const settings = {
@@ -40,7 +43,7 @@ const Portfolio = () => {
         <Slider {...settings}>
           <div className="item">
             <NavLink to="https://farhat-fakhar.github.io/Real-estate-website-demo/" style={{textDecoration:"none"}}>
-              <Image src="/images/portfolio1.png" fluid />
+              <Image src={portfolio1} fluid />
               <div className="title">
                 <p>Build in HTML, CSS & JAVASCRIPT</p>
               </div>
@@ -48,14 +51,14 @@ const Portfolio = () => {
           </div>
           <div className="item">
             <NavLink to="https://farhat-fakhar.github.io/project/" style={{textDecoration:"none"}}>
-              <Image src="/images/portfolio2.png" fluid />
+              <Image src={portfolio2} fluid />
               <div className="title">
                 <p>Build in HTML, CSS & JAVASCRIPT</p>
               </div>
             </NavLink>
           </div>
           <div className="item">
-            <Image src="/images/project3.png" fluid />
+            <Image src={portfolio3} fluid />
             <div className="title">
                 <p>Build in REACT JS, MUI & Styled component</p>
               </div>
@@ -97,5 +100,8 @@ const Wrapper = styled.div`
     top: 40%;
     margin: 0 5px;
   }
+  @media only screen and (max-width: 700px) {
+ padding: 120px 0;
+ }
 `
 export default Portfolio;

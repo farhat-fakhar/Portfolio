@@ -40,7 +40,6 @@ function App() {
                 <Route path="/education" element={<Education />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/contact" element={<Contact />} />
-
               </Routes>
             </main>
           </div>
@@ -49,10 +48,5 @@ function App() {
     </Wrapper>
   );
 }
-const Wrapper=styled.div`
-  @media only screen and (max-width: 600px) {
-    .app-container{
-     }
-}
-`
+const Wrapper = styled.div``;
 export default App;

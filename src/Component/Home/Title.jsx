@@ -19,6 +19,12 @@ const Wrapper=styled.div`
 .title{
  padding-top:20px ;
 }
+@media only screen and (max-width: 700px) {
+  h4{
+        font-size: 20px;
  
+
+}
+}
 `
 export default Title

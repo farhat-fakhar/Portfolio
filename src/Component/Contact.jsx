@@ -3,14 +3,14 @@ import styled from "styled-components";
 import Title from "./Home/Title";
 import { Col, Image, Row } from "react-bootstrap";
 import { IoLocationSharp } from "react-icons/io5";
+import contacting from "./assets/contact.png";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-
 const Contact = () => {
   return (
     <Wrapper>
       <Title title="Contact" />
       <Row className="d-flex justify-content-around ">
-        <Col lg={5}>
+        <Col lg={5} md={12}  >
           <div className="info ">
             <div className="address d-flex">
               <div className="icon  d-flex justify-content-center align-items-center">
@@ -34,9 +34,7 @@ const Contact = () => {
               <div className="contact d-flex flex-column mt-4">
                 <h6>
                   <strong>
-                    <parseInt>
-                      <strong>Email:</strong>
-                    </parseInt>
+                    <strong>Email:</strong>
                   </strong>
                 </h6>
                 <p>farhatfakhar819@gmail.com</p>
@@ -56,15 +54,11 @@ const Contact = () => {
               </div>
             </div>
             <div className="img d-flex justify-content-center align-items-center pt-1">
-              <Image
-                src="/images/contact.png"
-                fluid
-                style={{ height: "300px" }}
-              />
+              <Image src={contacting} fluid style={{ height: "300px" }} />
             </div>
           </div>
         </Col>
-        <Col lg={6} className="  contact_form">
+        <Col lg={6} md={12}   className="  contact_form">
           <form action="https://formspree.io/f/xwpevbdw" method="post">
             <Row>
               <Col lg={6} className="d-flex">
@@ -103,7 +97,7 @@ const Contact = () => {
                 <div className="msg w-100 mt-3">
                   <label htmlFor="">Message: </label>
                   <textarea
-                    class="form-control mt-2"
+                    className="form-control mt-2"
                     rows="5"
                     required
                   ></textarea>
@@ -126,7 +120,7 @@ const Contact = () => {
 const Wrapper = styled.div`
   .info,
   .contact_form {
-    padding: 10px 30px 0px;
+     padding:30px;
     background: #fff;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   }
@@ -178,23 +172,22 @@ const Wrapper = styled.div`
     border: none;
     outline: none;
   }
-  @media only screen and (max-width: 667px) {
+  @media only screen and (max-width: 700px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     h6 {
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 0;
-    }
-    p {
-      font-size: 12px;
-    }
-    .icon {
-    margin-right: 10px;
-     
+     font-size: 16px;
+  }
+  .icon {
+    margin-right: 15px;
+  
     p {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
- 
+  }
 `;
 export default Contact;
