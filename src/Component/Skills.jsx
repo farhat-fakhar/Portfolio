@@ -29,9 +29,7 @@ const Skills = () => {
           slidesToShow: 1, // Show 1 slide at a time
           slidesToScroll: 1,
         },
-      }
-    
-         
+      },
     ],
   };
 
@@ -182,9 +180,16 @@ const Skills = () => {
 };
 
 const Wrapper = styled.div`
-  /* max-width: 100%;
-  overflow: hidden; */
-
+  .slick-slide {
+    margin: 0;
+  }
+  .slick-dots {
+    bottom: 150px;
+  }
+  .slick-prev,
+  .slick-next {
+    top: 25%;
+  }
   p {
     text-align: justify;
     color: ${({ theme }) => theme.colors.headingColor};
@@ -216,26 +221,28 @@ const Wrapper = styled.div`
   .slick-slide {
     margin: 10px; /* Adjust this value to increase or decrease spacing */
   }
+
   @media only screen and (max-width: 450px) {
     padding: 50px 0;
-    p{
+    .slick-slide {
+    margin: 0;
+  }
+    p {
       font-size: 14px;
     }
     .item {
       height: 300px;
     }
-  }
-  .slick-slide {
-    margin: 0; /* Adjust this value to increase or decrease spacing */
-  }
-  .slick-dots {
-    bottom: 50px;  
-  }
-  .slick-prev,
-  .slick-next {
- 
-    top: 45%; // Adjust vertical alignment
- 
+    .slick-slide {
+      margin: 0;
+    }
+    .slick-dots {
+      bottom: 50px;
+    }
+    .slick-prev,
+    .slick-next {
+      top: 45%;
+    }
   }
 `;
 
