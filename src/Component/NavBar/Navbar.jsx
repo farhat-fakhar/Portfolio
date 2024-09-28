@@ -255,7 +255,7 @@ const Wrapper = styled.div`
         }
       }
     }
-  }
+  
   .social_icons {
     ul {
       li {
@@ -268,6 +268,6 @@ const Wrapper = styled.div`
         height: 24px;
       }
     }
-  }
+  }}
 `;
 export default Navbar;
