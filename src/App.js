@@ -40,6 +40,7 @@ function App() {
                 <Route path="/education" element={<Education />} />
                 <Route path="/showcase" element={<Portfolio />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<Home />} />
               </Routes>
           
         </ThemeProvider>
