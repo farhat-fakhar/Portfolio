@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import hero from "../assets/logo.jpg";
+import resume from "../assets/Farhat-Resume-Front-end-developer.pdf"
 import { NavLink } from "react-router-dom";
  const Hero = () => {
   const handleDownload = () => {
