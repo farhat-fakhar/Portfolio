@@ -4,77 +4,100 @@ import styled from "styled-components";
 import { Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import hero from "../assets/logo.jpg";
-const Hero = () => {
+import { NavLink } from "react-router-dom";
+ const Hero = () => {
   const handleDownload = () => {
-    const resumeUrl = "/images/Farhat-resume.pdf";
+    const resumeUrl = "/images/Farhat-Resume-Front-end-developer.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.setAttribute("download", "resume.pdf");
+    link.setAttribute("download", "farhat-resume.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
   return (
     <Wrapper>
-      <Row>
+      <Row className="d-flex justify-content-center align-items-center">
         <Col
           lg={6}
-          md={12}
-          className="content d-flex justify-content-center align-items-start flex-column"
+          md={8}
+           className="content d-flex justify-content-center align-items-start flex-column pe-5"
         >
           <h2>Hello! I'm</h2>
           <h1>Farhat Fakhar</h1>
 
-          <p>
-            "I’m a passionate Front-End Developer with a focus on building
-            responsive, user-friendly, and dynamic web applications. I thrive in
-            bringing creative solutions to life through coding."
-          </p>
+          <h3>
+          Front-End Developer  
+          </h3>
+         <div className="buttons d-flex">
+         <div className="download_btn my-3 me-3">
+            <NavLink to="/contact"><Button
+              variant="contained"
+               sx={{ backgroundColor: "#1b1b1b" }}
+            >
+              Hire me
+            </Button></NavLink>
+          </div>
           <div className="download_btn my-3">
             <Button
               variant="contained"
               startIcon={<DownloadIcon />}
               onClick={handleDownload}
-              sx={{ backgroundColor: "#004999" }}
+              sx={{ backgroundColor: "#1b1b1b" }}
             >
-              Download Resume
+              Download RESUME
             </Button>
           </div>
+         </div>
         </Col>
-        <Col lg={6} md={12} className="title">
-          <Image className="img" src={hero} fluid />  
+        <Col
+          lg={4}
+          md={4}
+          
+          className="title d-flex justify-content-center align-items-center pt-2"
+        >
+          <Image className="img" src={hero} fluid />
         </Col>
       </Row>
     </Wrapper>
   );
 };
 const Wrapper = styled.div`
-  padding: 70px 0;
-.title{
-.img{
-  border-radius: 10%;
-}
-}
+  padding: 20px 100px;
+  overflow-x: hidden;
+
+  .title {
+    .img {
+      border-radius: 10%;
+    }
+  }
   h1 {
     margin: 0 0 10px 0;
-    font-size: 50px;
+    font-size: 36px;
     font-weight: 600;
-    line-height: 56px;
-    color: #004999;
+    line-height: 30px;
+    color: ${({theme})=>theme.colors.JetBlack};
     font-family: "Poppins", sans-serif;
   }
   h2 {
-    color: #004999;
+    color: ${({theme})=>theme.colors.CharcoalBlack};
 
     font-size: 26px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+  }
+  h3 {
+    color: ${({theme})=>theme.colors.OnyxBlack};
+
+    font-size: 38px;
+    margin-bottom: 10px;
     font-family: "Poppins", sans-serif;
   }
   p {
     color: ${({ theme }) => theme.colors.headingColor};
 
-    margin-bottom: 30px;
-    font-size: 26px;
+    margin-bottom: 20px;
+    font-size: 23px;
     font-family: "Poppins", sans-serif;
   }
   .content {
@@ -87,32 +110,35 @@ const Wrapper = styled.div`
       font-weight: 500;
     }
   }
-  @media only screen and (max-width: 700px) {
-    padding: 100px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @media only screen and (max-width: 767px) {
     h1 {
-  
-    font-size: 40px;
-     
-  }
-  }
-  @media only screen and (max-width: 450px) {
-    h1 {
-    margin: 0 0 10px 0;
-    font-size: 25px;
-     line-height: 20px;
- 
-  }
-  p{
-    margin-bottom: 10px;
-  }
-  .content {
-    p {
-       font-size: 16px;  
+      font-size: 36px;
+    }
+    h3{
+      font-size: 30px;
+    }
+    .content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   }
-}
+  @media only screen and (max-width: 500px) {
+    padding: 0 20px;
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 25px;
+      line-height: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .content {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 `;
 export default Hero;

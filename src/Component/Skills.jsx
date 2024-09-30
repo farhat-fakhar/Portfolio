@@ -35,7 +35,7 @@ const Skills = () => {
 
   return (
     <Wrapper>
-      <Title title="Frontend Development & UI/UX Design Expertise" />
+      <Title title="Front-end Development & UI/UX Design Expertise" />
       <p>
         "I specialize in front-end technologies like HTML, CSS, JavaScript, and
         React.js, focusing on developing responsive, interactive user
@@ -43,10 +43,10 @@ const Skills = () => {
         styled-components, I craft sleek, efficient designs. I'm also adept at
         using GitHub for streamlined version control and team collaboration."
       </p>
-      <div className="slider-container py-5">
+      <div className="slider-container pt-5">
         <Slider {...settings}>
           <div className="item d-flex flex-column ">
-            <h5> Frontend Development</h5>
+            <h5> Front-End Languages:</h5>
             <ul className="m-0 p-0">
               <li>
                 <span className="me-3">
@@ -70,66 +70,84 @@ const Skills = () => {
           </div>
 
           <div className="item d-flex flex-column  ">
-            <h5>Component Libraries & UI/UX Design</h5>
+            <h5>Front-End Frameworks/Libraries:</h5>
             <ul className="m-0 p-0">
               <li>
                 <span className="me-3">
                   <FaRegDotCircle />
                 </span>
-                MUI (Material Design)
+                React.js
               </li>
               <li>
                 <span className="me-3">
                   <FaRegDotCircle />
                 </span>
-                Styled-components
+                Redux
               </li>
               <li>
                 <span className="me-3">
                   <FaRegDotCircle />
                 </span>
-                React Bootstrap
+                Next.js
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                jQuery
               </li>
             </ul>
           </div>
 
           <div className="item d-flex flex-column  ">
-            <h5>Version Control & Collaboration</h5>
+            <h5>Styling</h5>
             <ul className="m-0 p-0">
               <li>
                 <span className="me-3">
                   <FaRegDotCircle />
                 </span>
-                Git & GitHub
+                Bootstrap
               </li>
               <li>
                 <span className="me-3">
                   <FaRegDotCircle />
                 </span>
-                Collaboration Tools
+                Tailwind CSS
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Styled Components
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Material-UI (MUI)
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Ant Design
               </li>
             </ul>
           </div>
           <div className="item d-flex flex-column  ">
-            <h5>JavaScript Ecosystem</h5>
+            <h5>Version Control</h5>
             <ul className="m-0 p-0">
               <li>
                 <span className="me-3">
                   <FaRegDotCircle />
                 </span>
-                ES6+ Features
+                Git
               </li>
               <li>
                 <span className="me-3">
                   <FaRegDotCircle />
                 </span>
-                JavaScript Libraries
-              </li>
-              <li>
-                <span className="me-3">
-                  <FaRegDotCircle />
-                </span>
-                API Integration
+                GitHub
               </li>
             </ul>
           </div>
@@ -173,6 +191,64 @@ const Skills = () => {
               </li>
             </ul>
           </div>
+          <div className="item d-flex flex-column  ">
+            <h5>Other</h5>
+            <ul className="m-0 p-0">
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Web performance optimization
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Responsive design
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Cross-browser compatibility
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Mobile-first development
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                UX/UI principles
+              </li>
+            </ul>
+          </div>
+          <div className="item d-flex flex-column  ">
+            <h5>Deployment</h5>
+            <ul className="m-0 p-0">
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Netlify
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Vercel
+              </li>
+              <li>
+                <span className="me-3">
+                  <FaRegDotCircle />
+                </span>
+                Firebase
+              </li>
+            </ul>
+          </div>
         </Slider>
       </div>
     </Wrapper>
@@ -180,15 +256,22 @@ const Skills = () => {
 };
 
 const Wrapper = styled.div`
-  .slick-slide {
+  padding:20px 100px 0px 100px;
+  overflow-x: hidden;
+
+   .slick-slide {
     margin: 0;
   }
   .slick-dots {
-    bottom: 150px;
+    bottom: 200px;
   }
   .slick-prev,
   .slick-next {
     top: 25%;
+  }
+  .py-5{
+    padding-bottom:0;
+    
   }
   p {
     text-align: justify;
@@ -207,11 +290,9 @@ const Wrapper = styled.div`
   .item {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 15px 25px;
-    height: 200px;
+    height: 250px;
   }
-  .slider-container {
-    padding: 60px 0;
-  }
+ 
   ul {
     list-style: none;
     li {
@@ -221,12 +302,24 @@ const Wrapper = styled.div`
   .slick-slide {
     margin: 10px; /* Adjust this value to increase or decrease spacing */
   }
-
-  @media only screen and (max-width: 450px) {
-    padding: 50px 0;
-    .slick-slide {
+  @media only screen and (max-width: 767px) {
+    .slick-dots {
+    bottom: -50px;
+  }
+  .slick-prev,
+  .slick-next {
+    top: 50%;
+  }
+  .slick-slide {
     margin: 0;
   }
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 20px;
+    
+    .slick-slide {
+      margin: 0;
+    }
     p {
       font-size: 14px;
     }

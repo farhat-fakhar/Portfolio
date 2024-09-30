@@ -118,6 +118,8 @@ const Contact = () => {
   );
 };
 const Wrapper = styled.div`
+  padding: 0 100px;
+overflow-x: hidden;
   .info,
   .contact_form {
      padding:30px;
@@ -138,7 +140,7 @@ const Wrapper = styled.div`
     font-weight: 400;
     line-height: 1.5;
     color: ${({ theme }) => theme.colors.headingColor};
-    border: 1px solid ${({ theme }) => theme.colors.borderColor};
+    border: 1px solid #cbd0d5;
     margin-top: 10px;
   }
   p {
@@ -189,7 +191,8 @@ const Wrapper = styled.div`
     }
   }
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
+    padding: 20px;
     .info{
       padding: 15px ;
     }

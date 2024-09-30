@@ -113,6 +113,9 @@ const Education = () => {
   );
 };
 const Wrapper = styled.div`
+  padding: 20px 100px;
+  overflow-x: hidden;
+
   h3 {
     font-family: "poppins";
     font-weight: 550;
@@ -120,7 +123,7 @@ const Wrapper = styled.div`
   }
   .item {
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 5px;
-    padding: 13px 20px;
+    padding:  20px;
     .detail {
       display: flex;
       justify-content: flex-start;
@@ -130,7 +133,14 @@ const Wrapper = styled.div`
       }
     }
   }
- 
+  @media only screen and (max-width: 992px) {
+    
+    .item {
+      h3{
+        font-size: 16px;
+      }
+    }
+}
   @media only screen and (max-width: 700px) {
     .MuiTimelineItem-positionAlternate {
       justify-content: flex-start; /* Ensure alignment remains proper */
@@ -143,8 +153,12 @@ const Wrapper = styled.div`
   }
   }
    /* Adjust layout and typography for mobile screens */
-   @media only screen and (max-width: 450px) {
-    padding: 0;
+   @media only screen and (max-width: 500px) {
+    padding: 20px;
+    .cCoiLZ{
+      padding: 20px;
+    }
+    
     .MuiTimelineItem-positionAlternate {
       justify-content: flex-start; /* Ensure alignment remains proper */
     }
@@ -156,15 +170,15 @@ const Wrapper = styled.div`
   padding: 0;
  }
     h3 {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
     }
 
     .item {
-      padding: 5px 8px;
+      padding: 10px 15px;
 
       .detail p {
-        font-size: 12px;
+        font-size: 15px;
         margin-right: 5px;
       }
 

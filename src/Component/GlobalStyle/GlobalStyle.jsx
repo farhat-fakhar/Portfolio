@@ -7,8 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     box-sizing: border-box;
     font-family: "Quicksand";
-    
-
+  
 }
  p{
   margin: 0;
@@ -36,6 +35,8 @@ h1{
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: center;
+  color: ${({theme})=>theme.colors.JetBlack};
+
  }
    
  h2{

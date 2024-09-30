@@ -9,18 +9,20 @@ import Skills from "./Component/Skills";
 import Education from "./Component/Education";
 import Portfolio from "./Component/Portfolio";
 import Contact from "./Component/Contact";
+import Nav from "./Component/Nav";
 
 function App() {
   const theme = {
     colors: {
-      greenColor: "#009f7f",
-      bgColor: "#f3f4f6",
-      borderColor: "#e5e7eb",
-      textColor: "#333333",
-      yellowColor: "#eab308",
+      JetBlack: "#343a40",
+      CharcoalBlack: "#2c2f33",
+      OnyxBlack: "#0f0f0f",
+      GraphiteBlack: "#383838",
+      MatteBlack: "#1b1b1b",
       whiteColor: "#ffffff",
-      menuColor: "#7E7E7E",
+ 
       headingColor: "#031426",
+    
     },
   };
 
@@ -29,7 +31,17 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <div className="app-container">
+          <Nav/>
+          <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/hero" element={<Hero />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/showcase" element={<Portfolio />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+          {/* <div className="app-container">
             <Navbar />
             <main className="main-content">
               <Routes>
@@ -42,7 +54,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </main>
-          </div>
+          </div> */}
         </ThemeProvider>
       </BrowserRouter>
     </Wrapper>
