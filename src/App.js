@@ -41,20 +41,7 @@ function App() {
                 <Route path="/showcase" element={<Portfolio />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
-          {/* <div className="app-container">
-            <Navbar />
-            <main className="main-content">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/hero" element={<Hero />} />
-                <Route path="/skills" element={<Skills />} />
-                <Route path="/education" element={<Education />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </main>
-          </div> */}
+          
         </ThemeProvider>
       </BrowserRouter>
     </Wrapper>
