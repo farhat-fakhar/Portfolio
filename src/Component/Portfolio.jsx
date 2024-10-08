@@ -3,8 +3,7 @@ import styled from "styled-components";
 import Title from "./Home/Title";
 import { Image } from "react-bootstrap";
 import Slider from "react-slick";
-import { NavLink } from "react-router-dom";
-import portfolio1 from "./assets/portfolio1.PNG";
+ import portfolio1 from "./assets/portfolio1.PNG";
 import portfolio2 from "./assets/portfolio2.PNG";
 import portfolio3 from "./assets/project3.PNG";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -50,36 +49,47 @@ const Portfolio = () => {
       <div className="slider-container mt-3 ">
         <Slider {...settings}>
           <div className="item">
-            <NavLink
-              to="https://farhat-fakhar.github.io/Real-estate-website-demo/"
+            <a
+              href="https://farhat-fakhar.github.io/Real-estate-website-demo/"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               <Image src={portfolio1} fluid />
-              <div className="heading">
+              <div className="heading ">
                 <p>Build in HTML, CSS & JAVASCRIPT</p>
-                <p><FaExternalLinkAlt/></p>
-
+                <p>
+                  <FaExternalLinkAlt />
+                </p>
               </div>
-            </NavLink>
+            </a>
           </div>
+
           <div className="item">
-            <NavLink
-              to="https://farhat-fakhar.github.io/project/"
+            <a
+              href="https://farhat-fakhar.github.io/project/"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               <Image src={portfolio2} fluid />
-              <div className="heading">
+              <div className="heading ">
                 <p>Build in HTML, CSS & JAVASCRIPT</p>
-                <p><FaExternalLinkAlt/></p>
-
+                <p>
+                  <FaExternalLinkAlt />
+                </p>
               </div>
-            </NavLink>
+            </a>
           </div>
           <div className="item">
             <Image src={portfolio3} fluid />
-            <div className="heading  ">
-              <p>Build in REACT JS, MUI & Styled component</p>
-              <p><FaExternalLinkAlt/></p>
+            <div className="heading  py-2">
+              <p style={{ fontSize: "15px" }}>
+                Build in REACT JS, MUI & Styled component (under developing)
+              </p>
+              <p>
+                <FaExternalLinkAlt />
+              </p>
             </div>
           </div>
         </Slider>
@@ -96,10 +106,10 @@ const Wrapper = styled.div`
     color: ${({ theme }) => theme.colors.headingColor};
     font-weight: 500;
   }
-  .heading{
+  .heading {
     display: flex;
     justify-content: space-between;
-     padding: 10px 20px;
+    padding: 10px 20px;
     background-color: ${({ theme }) => theme.colors.headingColor};
     p {
       font-size: 17px;
@@ -110,9 +120,7 @@ const Wrapper = styled.div`
   .title {
     display: flex;
     justify-content: space-between;
-     padding: 10px 20px;
-      
-    
+    padding: 10px 20px;
   }
   .slick-slide {
     padding: 0 10px;
@@ -129,19 +137,19 @@ const Wrapper = styled.div`
     margin: 0 5px;
   }
   @media only screen and (max-width: 992px) {
-    .heading{
-     padding: 10px ;
-     p {
-      font-size: 12px;
-      font-weight:500;
+    .heading {
+      padding: 10px;
+      p {
+        font-size: 12px;
+        font-weight: 500;
+      }
     }
-  }
   }
   @media only screen and (max-width: 767px) {
     padding-top: 50px;
-   }
-   @media only screen and (max-width: 500px) {
+  }
+  @media only screen and (max-width: 500px) {
     padding: 20px;
-   }
+  }
 `;
 export default Portfolio;

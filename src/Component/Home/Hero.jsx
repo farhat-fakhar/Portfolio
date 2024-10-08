@@ -8,7 +8,7 @@ import resume from "../assets/Farhat-Resume-Front-end-developer.pdf"
 import { NavLink } from "react-router-dom";
  const Hero = () => {
   const handleDownload = () => {
-    const resumeUrl = "/images/Farhat-Resume-Front-end-developer.pdf";
+    const resumeUrl = "https://drive.google.com/https://drive.google.com/file/d/1g7wUzbxAj0qS3MEhwXNq1HUvsJXVdgwx/view?usp=sharing";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.setAttribute("download", "farhat-resume.pdf");
@@ -16,6 +16,7 @@ import { NavLink } from "react-router-dom";
     link.click();
     document.body.removeChild(link);
   };
+  
   return (
     <Wrapper>
       <Row className="d-flex justify-content-center align-items-center">
