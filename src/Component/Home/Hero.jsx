@@ -8,14 +8,15 @@ import resume from "../assets/Farhat-Resume-Front-end-developer.pdf"
 import { NavLink } from "react-router-dom";
  const Hero = () => {
   const handleDownload = () => {
-    const resumeUrl = "https://drive.google.com/https://drive.google.com/file/d/1g7wUzbxAj0qS3MEhwXNq1HUvsJXVdgwx/view?usp=sharing";
+    const resumeUrl = "https://raw.githubusercontent.com/farhat-fakhar/project/main/src/assets/Farhat-Resume-Front-end-developer.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.setAttribute("download", "farhat-resume.pdf");
+    link.setAttribute("download", "Farhat-Resume-Front-end-developer.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+  
   
   return (
     <Wrapper>
