@@ -4,20 +4,17 @@ import styled from "styled-components";
 import { Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import hero from "../assets/logo.jpg";
-import resume from "../assets/Farhat-Resume-Front-end-developer.pdf"
-import { NavLink } from "react-router-dom";
+ import { NavLink } from "react-router-dom";
  const Hero = () => {
   const handleDownload = () => {
-    const resumeUrl = "https://raw.githubusercontent.com/farhat-fakhar/project/main/src/assets/Farhat-Resume-Front-end-developer.pdf";
+    const resumeUrl = "/resume.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.setAttribute("download", "Farhat-Resume-Front-end-developer.pdf");
+    link.setAttribute("download", "farhat-resume.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
-  
-  
   return (
     <Wrapper>
       <Row className="d-flex justify-content-center align-items-center">
