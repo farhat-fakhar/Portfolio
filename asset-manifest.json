@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.8e1b2dcb.css",
-    "main.js": "/Portfolio/static/js/main.28695876.js",
+    "main.js": "/Portfolio/static/js/main.2585715d.js",
     "static/js/453.7812a72f.chunk.js": "/Portfolio/static/js/453.7812a72f.chunk.js",
     "static/media/portfolio2.PNG": "/Portfolio/static/media/portfolio2.fa03b47465fb792ddf14.PNG",
     "static/media/portfolio1.PNG": "/Portfolio/static/media/portfolio1.0b239ca305a2a86de9db.PNG",
     "static/media/project3.PNG": "/Portfolio/static/media/project3.c91b5f5356f6f5b3f299.PNG",
-    "static/media/Farhat-Resume-Front-end-developer.pdf": "/Portfolio/static/media/Farhat-Resume-Front-end-developer.6ccfb2452ca36e151e04.pdf",
     "static/media/logo.jpg": "/Portfolio/static/media/logo.a830ec6497382e310d56.jpg",
     "static/media/contact.png": "/Portfolio/static/media/contact.ee6b2af40ab90e6f1936.png",
     "static/media/slick.svg": "/Portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -15,11 +14,11 @@
     "index.html": "/Portfolio/index.html",
     "static/media/slick.woff": "/Portfolio/static/media/slick.295183786cd8a1389865.woff",
     "main.8e1b2dcb.css.map": "/Portfolio/static/css/main.8e1b2dcb.css.map",
-    "main.28695876.js.map": "/Portfolio/static/js/main.28695876.js.map",
+    "main.2585715d.js.map": "/Portfolio/static/js/main.2585715d.js.map",
     "453.7812a72f.chunk.js.map": "/Portfolio/static/js/453.7812a72f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e1b2dcb.css",
-    "static/js/main.28695876.js"
+    "static/js/main.2585715d.js"
   ]
 }
